@@ -26,12 +26,13 @@ const addTask = () => {
     let li = document.createElement("li");
 
     li.innerHTML = `
-        <span>${taskText}</span>
+        <span></span>
         <div class="task-buttons">
             <button class="done-btn">✔ Done</button>
             <button class="delete-btn">✖ Delete</button>
         </div>
     `;
+    li.querySelector("span").textContent = taskText;
 
     // Done button ka kaam
     li.querySelector(".done-btn").addEventListener("click", () => {
